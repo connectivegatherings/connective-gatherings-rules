@@ -1,372 +1,492 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Community Rules & Participation Standards | Connective Gatherings</title>
+    <meta name="description"
+          content="Community Rules and Participation Standards for Connective Gatherings LLC events.">
 
-<style>
+    <title>Community Rules &amp; Participation Standards | Connective Gatherings</title>
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto:wght@400;500&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto:wght@400;500;700&display=swap');
 
-:root {
-    --gold: #ffda68;
-    --gold-heading: #ffd34e;
-    --black: #151515;
-    --top-black: #050505;
-    --body-text: #b7bcc5;
-    --hero-text: #353535;
-}
+        :root {
+            --gold: #ffda68;
+            --gold-heading: #ffd34e;
+            --black: #151515;
+            --top-black: #050505;
+            --body-text: #b7bcc5;
+            --hero-text: #353535;
+            --panel: #202020;
+            --border: #424242;
+        }
 
-* {
-    box-sizing: border-box;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: "Roboto", Arial, sans-serif;
-    background: var(--black);
-    color: var(--body-text);
-    font-size: 16px;
-    line-height: 1.55;
-}
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: "Roboto", Arial, sans-serif;
+            background: var(--black);
+            color: var(--body-text);
+            font-size: 17px;
+            line-height: 1.75;
+        }
 
-/* TOP BAR */
+        /* TOP BAR */
 
-.top-bar {
-    height: 32px;
-    background: var(--top-black);
-}
+        .top-bar {
+            height: 32px;
+            flex-shrink: 0;
+            background: var(--top-black);
+        }
 
-/* HERO */
+        /* HERO */
 
-.hero {
-    background: var(--gold);
-    color: var(--hero-text);
-}
+        .hero {
+            background: var(--gold);
+            color: var(--hero-text);
+        }
 
-.hero-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 45px 20px 55px;
-}
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 55px 32px 60px;
+            text-align: center;
+        }
 
-h1 {
-    margin: 0 0 32px;
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 36px;
-    line-height: 1.15;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #050505;
-}
+        h1 {
+            margin: 0 0 22px;
+            font-family: "Oswald", Arial, sans-serif;
+            font-size: 42px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--top-black);
+        }
 
-.hero p {
-    margin: 0 0 24px;
-    font-size: 16px;
-    line-height: 1.55;
-}
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 18px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
 
-/* RULES AREA */
+        .hero p:last-child {
+            margin-bottom: 0;
+        }
 
-.rules {
-    background: var(--black);
-}
+        /* MAIN CONTENT */
 
-.rules-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 45px 20px 70px;
-}
+        main {
+            flex: 1;
+            width: 100%;
+        }
 
-section {
-    margin: 0 0 28px;
-}
+        .content-inner {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 55px 32px 75px;
+        }
 
-h2 {
-    margin: 0 0 22px;
-    color: var(--gold-heading);
-    font-size: 20px;
-    font-weight: 500;
-}
+        section {
+            margin-bottom: 42px;
+        }
 
-p {
-    margin: 0 0 22px;
-}
+        h2 {
+            margin: 0 0 20px;
+            color: var(--gold-heading);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
 
-ul {
-    margin: 0 0 28px 34px;
-    padding: 0;
-}
+        p {
+            margin: 0 0 22px;
+            line-height: 1.75;
+        }
 
-li {
-    margin: 3px 0;
-}
+        ul {
+            margin: 0 0 26px 32px;
+            padding: 0;
+        }
 
-/* ACKNOWLEDGMENT */
+        li {
+            margin: 9px 0;
+            padding-left: 4px;
+            line-height: 1.7;
+        }
 
-.acknowledgment {
-    margin-top: 48px;
-    padding-top: 35px;
-    border-top: 1px solid #333;
-}
+        /* SHIFT RULES RIGHT ON DESKTOP */
 
-.acknowledgment h2 {
-    margin-bottom: 16px;
-}
+        @media (min-width: 900px) {
+            .content-inner > section:not(.acknowledgment) {
+                transform: translateX(65px);
+            }
+        }
 
-.acknowledgment p {
-    margin-bottom: 24px;
-}
+        /* ACKNOWLEDGMENT */
 
-.button {
-    display: inline-block;
-    padding: 14px 22px;
-    background: var(--gold);
-    color: #111;
-    text-decoration: none;
-    font-weight: 500;
-}
+        .acknowledgment {
+            margin-top: 55px;
+            padding: 45px 35px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
 
-.button:hover {
-    background: var(--gold-heading);
-}
+        .acknowledgment h2 {
+            margin-bottom: 18px;
+        }
 
-/* FOOTER */
+        .acknowledgment p {
+            max-width: 760px;
+            margin: 0 auto 28px;
+            font-size: 18px;
+        }
 
-footer {
-    background: var(--top-black);
-    color: #888;
-    text-align: center;
-    padding: 22px 20px;
-    font-size: 13px;
-}
+        /* BUTTON */
 
-/* MOBILE */
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            min-width: 260px;
+            background: var(--gold);
+            color: #111;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+            transition: background 0.2s ease;
+        }
 
-@media (max-width: 600px) {
+        .button:hover,
+        .button:focus-visible {
+            background: var(--gold-heading);
+        }
 
-    .hero-inner {
-        padding: 36px 22px 42px;
-    }
+        .button:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 3px;
+        }
 
-    .rules-inner {
-        padding: 38px 22px 55px;
-    }
+        /* FOOTER */
 
-    h1 {
-        font-size: 30px;
-    }
+        footer {
+            background: var(--top-black);
+            color: #888;
+            text-align: center;
+            padding: 24px 20px;
+            font-size: 13px;
+        }
 
-    .button {
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-}
+        /* TABLET */
 
-</style>
+        @media (max-width: 899px) {
+            .hero-inner {
+                padding: 45px 24px 50px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .content-inner {
+                padding: 45px 24px 60px;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+
+            .hero-inner {
+                padding: 40px 22px 45px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .content-inner {
+                padding: 36px 20px 50px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            section {
+                margin-bottom: 32px;
+            }
+
+            ul {
+                margin-left: 24px;
+            }
+
+            .acknowledgment {
+                padding: 30px 20px;
+            }
+
+            .acknowledgment p {
+                font-size: 16px;
+            }
+
+            .button {
+                display: block;
+                width: 100%;
+                min-width: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="top-bar"></div>
+    <div class="top-bar"></div>
 
-<header class="hero">
-    <div class="hero-inner">
+    <!-- HERO -->
 
-        <h1>Community Rules &amp; Participation Standards</h1>
+    <header class="hero">
+        <div class="hero-inner">
 
-        <p>
-            These Community Rules &amp; Participation Standards exist to ensure a
-            welcoming, respectful, and safe experience for everyone who participates
-            in Connective Gatherings events.
-        </p>
+            <h1>Community Rules &amp; Participation Standards</h1>
 
-        <p>
-            To participate in Connective Gatherings events, members are expected to
-            review and agree to these Community Rules &amp; Participation Standards.
-        </p>
+            <p>
+                These Community Rules &amp; Participation Standards
+                exist to ensure a welcoming, respectful, and safe
+                experience for everyone who participates in
+                Connective Gatherings events.
+            </p>
 
-    </div>
-</header>
+            <p>
+                To participate in Connective Gatherings events,
+                members are expected to review and agree to these
+                Community Rules &amp; Participation Standards.
+            </p>
 
+        </div>
+    </header>
 
-<main class="rules">
-<div class="rules-inner">
+    <!-- MAIN CONTENT -->
 
-<section>
-    <h2>Purpose</h2>
+    <main>
+        <div class="content-inner">
 
-    <p>
-        Connective Gatherings exists to facilitate social connection through organized
-        events in a welcoming, respectful, and inclusive environment.
-    </p>
+            <!-- PURPOSE -->
 
-    <p>These rules &amp; standards apply to:</p>
+            <section>
+                <h2>Purpose</h2>
 
-    <ul>
-        <li>All members</li>
-        <li>All event attendees</li>
-        <li>All events (free, donation-based, and premium)</li>
-        <li>All venues and public or private locations</li>
-    </ul>
-</section>
+                <p>
+                    Connective Gatherings exists to facilitate
+                    social connection through organized events
+                    in a welcoming, respectful, and inclusive
+                    environment.
+                </p>
 
+                <p>These rules &amp; standards apply to:</p>
 
-<section>
-    <h2>Respectful Conduct</h2>
+                <ul>
+                    <li>All members</li>
+                    <li>All event attendees</li>
+                    <li>All events (free, donation-based, and premium)</li>
+                    <li>All venues and public or private locations</li>
+                </ul>
+            </section>
 
-    <p>All participants are expected to:</p>
+            <!-- RESPECTFUL CONDUCT -->
 
-    <ul>
-        <li>Treat others, hosts, and venues with courtesy and respect</li>
-        <li>Refrain from harassment, intimidation, discrimination, or hostile behavior</li>
-        <li>Avoid disruptive, aggressive, or confrontational conduct</li>
-    </ul>
+            <section>
+                <h2>Respectful Conduct</h2>
 
-    <p>Hate speech, threats, or discriminatory behavior are not tolerated.</p>
-</section>
+                <p>All participants are expected to:</p>
 
+                <ul>
+                    <li>Treat others, hosts, and venues with courtesy and respect</li>
+                    <li>Refrain from harassment, intimidation, discrimination, or hostile behavior</li>
+                    <li>Avoid disruptive, aggressive, or confrontational conduct</li>
+                </ul>
 
-<section>
-    <h2>Boundaries &amp; Personal Safety</h2>
+                <p>
+                    Hate speech, threats, or discriminatory behavior
+                    are not tolerated.
+                </p>
+            </section>
 
-    <p>Respect personal boundaries at all times.</p>
+            <!-- BOUNDARIES -->
 
-    <ul>
-        <li>No unwanted physical contact, sexual advances, or persistent attention</li>
-        <li>If someone expresses discomfort or disinterest, it must be respected immediately</li>
-    </ul>
+            <section>
+                <h2>Boundaries &amp; Personal Safety</h2>
 
-    <p>Violations of personal boundaries may result in immediate removal.</p>
-</section>
+                <p>Respect personal boundaries at all times.</p>
 
+                <ul>
+                    <li>No unwanted physical contact, sexual advances, or persistent attention</li>
+                    <li>If someone expresses discomfort or disinterest, it must be respected immediately</li>
+                </ul>
 
-<section>
-    <h2>Alcohol, Substances &amp; Behavior</h2>
+                <p>
+                    Violations of personal boundaries may result
+                    in immediate removal.
+                </p>
+            </section>
 
-    <ul>
-        <li>Excessive intoxication is not permitted</li>
-        <li>Illegal substances are prohibited</li>
-        <li>Participants must remain capable of respectful and appropriate conduct</li>
-    </ul>
+            <!-- ALCOHOL AND SUBSTANCES -->
 
-    <p>Hosts may remove participants if behavior becomes unsafe or disruptive.</p>
-</section>
+            <section>
+                <h2>Alcohol, Substances &amp; Behavior</h2>
 
+                <ul>
+                    <li>Excessive intoxication is not permitted</li>
+                    <li>Illegal substances are prohibited</li>
+                    <li>Participants must remain capable of respectful and appropriate conduct</li>
+                </ul>
 
-<section>
-    <h2>Venue, Event &amp; Legal Compliance</h2>
+                <p>
+                    Hosts may remove participants if behavior
+                    becomes unsafe or disruptive.
+                </p>
+            </section>
 
-    <p>Participants must:</p>
+            <!-- VENUE AND LEGAL COMPLIANCE -->
 
-    <ul>
-        <li>Follow venue rules and staff instructions</li>
-        <li>Obey all local, state, and federal laws</li>
-        <li>Follow any event-specific guidelines</li>
-    </ul>
+            <section>
+                <h2>Venue, Event &amp; Legal Compliance</h2>
 
-    <p>
-        Participants are responsible for their own purchases, transportation,
-        and personal safety.
-    </p>
-</section>
+                <p>Participants must:</p>
 
+                <ul>
+                    <li>Follow venue rules and staff instructions</li>
+                    <li>Obey all local, state, and federal laws</li>
+                    <li>Follow any event-specific guidelines</li>
+                </ul>
 
-<section>
-    <h2>Organizer &amp; Host Authority</h2>
+                <p>
+                    Participants are responsible for their own
+                    purchases, transportation, and personal safety.
+                </p>
+            </section>
 
-    <ul>
-        <li>Event hosts and organizers are authorized to manage events</li>
-        <li>Hosts may deny attendance or remove participants to preserve a positive group environment</li>
-        <li>Organizer decisions are final and not subject to debate during events</li>
-    </ul>
-</section>
+            <!-- ORGANIZER AUTHORITY -->
 
+            <section>
+                <h2>Organizer &amp; Host Authority</h2>
 
-<section>
-    <h2>Participation &amp; Assumption of Risk</h2>
+                <ul>
+                    <li>Event hosts and organizers are authorized to manage events</li>
+                    <li>Hosts may deny attendance or remove participants to preserve a positive group environment</li>
+                    <li>Organizer decisions are final and not subject to debate during events</li>
+                </ul>
+            </section>
 
-    <ul>
-        <li>Participation is voluntary</li>
-        <li>Participants are responsible for their own actions</li>
-        <li>Attendance is at each participant's own discretion and risk</li>
-    </ul>
+            <!-- PARTICIPATION AND RISK -->
 
-    <p>
-        Connective Gatherings does not provide supervision, instruction,
-        or professional services.
-    </p>
-</section>
+            <section>
+                <h2>Participation &amp; Assumption of Risk</h2>
 
+                <ul>
+                    <li>Participation is voluntary</li>
+                    <li>Participants are responsible for their own actions</li>
+                    <li>Attendance is at each participant's own discretion and risk</li>
+                </ul>
 
-<section>
-    <h2>Enforcement &amp; Removal</h2>
+                <p>
+                    Connective Gatherings does not provide
+                    supervision, instruction, or professional services.
+                </p>
+            </section>
 
-    <p>Violations of these rules may result in:</p>
+            <!-- ENFORCEMENT -->
 
-    <ul>
-        <li>A warning</li>
-        <li>Removal from an event</li>
-        <li>Temporary or permanent removal from the group</li>
-    </ul>
+            <section>
+                <h2>Enforcement &amp; Removal</h2>
 
-    <p>
-        Serious or repeated violations may result in immediate action without warning.
-    </p>
-</section>
+                <p>Violations of these rules may result in:</p>
 
+                <ul>
+                    <li>A warning</li>
+                    <li>Removal from an event</li>
+                    <li>Temporary or permanent removal from the group</li>
+                </ul>
 
-<section>
-    <h2>Discretion</h2>
+                <p>
+                    Serious or repeated violations may result
+                    in immediate action without warning.
+                </p>
+            </section>
 
-    <p>Connective Gatherings reserves the right to:</p>
+            <!-- DISCRETION -->
 
-    <ul>
-        <li>Deny participation</li>
-        <li>Cancel attendance</li>
-        <li>Remove individuals from events or the group</li>
-    </ul>
+            <section>
+                <h2>Discretion</h2>
 
-    <p>
-        This discretion is exercised to protect participants, hosts, venues,
-        and the community as a whole.
-    </p>
-</section>
+                <p>Connective Gatherings reserves the right to:</p>
 
+                <ul>
+                    <li>Deny participation</li>
+                    <li>Cancel attendance</li>
+                    <li>Remove individuals from events or the group</li>
+                </ul>
 
-<section class="acknowledgment">
+                <p>
+                    This discretion is exercised to protect
+                    participants, hosts, venues, and the community
+                    as a whole.
+                </p>
+            </section>
 
-    <h2>Group Rules Acknowledgment</h2>
+            <!-- ACKNOWLEDGMENT -->
 
-    <p>
-        Before attending Connective Gatherings events, please complete the
-        Community Rules &amp; Participation Standards acknowledgment.
-    </p>
+            <section class="acknowledgment">
 
-    <a
-        class="button"
-        href="https://connectivegatherings.aidaform.com/cg-llc-community-rules-participation-standards-general"
-        target="_blank"
-        rel="noopener noreferrer">
-        Complete Acknowledgment
-    </a>
+                <h2>Group Rules Acknowledgment</h2>
 
-</section>
+                <p>
+                    Before attending Connective Gatherings events,
+                    please complete the Community Rules &amp;
+                    Participation Standards acknowledgment.
+                </p>
 
-</div>
-</main>
+                <a
+                    class="button"
+                    href="https://connectivegatherings.aidaform.com/cg-llc-community-rules-participation-standards-general"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Complete Acknowledgment
+                </a>
 
+            </section>
 
-<footer>
-    &copy; 2026 Connective Gatherings LLC
-</footer>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        &copy; 2026 Connective Gatherings LLC
+    </footer>
 
 </body>
 </html>
+
